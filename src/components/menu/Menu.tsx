@@ -1,20 +1,27 @@
-import React from "react";
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const Menu = (props: {menuItems: Array<string>}) => {
+export const Menu = () => {
   return (
-    <StyledMenu>
-      <ul>
-        {props.menuItems.map((element: string, index: number) => {
-          return (
-            <li key={index}>
-              <a href="#">{element}</a>
-            </li>
-          )
-        })}
-      </ul>
-    </StyledMenu>
-  );
+  <StyledMenu>
+    <ul>
+      <li>
+        <a>Home</a>
+      </li>
+      <li>
+        <a>Skills</a>
+      </li>
+      <li>
+        <a>Works</a>
+      </li>
+      <li>
+        <a>Testymony</a>
+      </li>
+      <li>
+        <a>Contact</a>
+      </li>
+    </ul>
+  </StyledMenu>
+  )
 }
 
 const StyledMenu = styled.nav`
@@ -22,4 +29,5 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 40px;
   }
+
 `

@@ -1,18 +1,16 @@
-import React from "react";
-import styled from "styled-components";
+import iconsSprite from '../../assets/images/icons-sprite.svg'
 
 type IconPropsType = {
-  path: string
-  alternativeText: string
+  iconId: string
+  width?: string
+  height?: string
+  viewBox?: string
 }
 
 export const Icon = (props: IconPropsType) => {
   return (
-    <StyledIcon src={`${props.path}`} alt={`${props.alternativeText}`} />
-  );
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width={props.width || "1188.000000pt"} height={props.height || "1280.000000pt"} viewBox={props.viewBox || "0 0 1188.000000 1280.000000"} preserveAspectRatio="xMidYMid meet">
+      <use xlinkHref={ `${iconsSprite}#${props.iconId}` }/>
+    </svg>
+  )
 }
-
-const StyledIcon = styled.img`
-  width: 80px;
-  height: 80px;
-`
