@@ -5,7 +5,7 @@ export const Menu = () => {
   <StyledMenu>
     <ul>
       <li>
-        <a>Home</a>
+        <a>About me</a>
       </li>
       <li>
         <a>Skills</a>
