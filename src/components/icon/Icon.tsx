@@ -9,8 +9,9 @@ type IconPropsType = {
 
 export const Icon = (props: IconPropsType) => {
   return (
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width={props.width || "40px"} height={props.height || "70px"} viewBox={props.viewBox || "0 0 1188.000000 1280.000000"} preserveAspectRatio="xMidYMid meet">
-      <use xlinkHref={ `${iconsSprite}#${props.iconId}` }/>
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width={props.width || "65px"} height={props.height || "75px"} viewBox={props.viewBox || "0 0 140px 100px"} >
+      <use xlinkHref={ `${iconsSprite}#${props.iconId}`} />
     </svg>
   )
 }
+

@@ -7,14 +7,14 @@ export const Contact = () => {
     <StyledContact>
       <Address>
         <FlexWrapper align="center" gaps="5px">
-          <Icon iconId={"iconSvg"}/>
+          <Icon iconId={"address"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>Адрес: </h4>
           <a href="https://yandex.by/maps/-/CDRUj2Kn">г. Минск, Фрунзенский р-н, ул. Одоевского</a>
         </FlexWrapper>
       </Address>
       <Phone>
         <FlexWrapper align="center" gaps="5px">
-          <Icon iconId={"iconSvg"}/>
+          <Icon iconId={"tel"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>Телефон: </h4>
           <p>
             <a href="tel:+375292907833">+375 (29) 290-78-33</a>
@@ -24,7 +24,7 @@ export const Contact = () => {
       </Phone>
       <Email>
         <FlexWrapper align="center" gaps="5px">
-          <Icon iconId={"iconSvg"}/>
+          <Icon iconId={"mail"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>Электронная почта: </h4>
           <p>
             <a href="mailto:viktor_RED_rudko@mail.ru">viktor_RED_rudko@mail.ru</a>

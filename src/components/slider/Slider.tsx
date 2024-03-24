@@ -7,7 +7,7 @@ export const Slider = () => {
     <StyledSlider>
       <Slide>
         <FlexWrapper direction="column" align="center">
-          <Icon iconId={"iconSvg"} />
+          <Icon iconId={"academy"} viewBox="0 50 1900 1929" width="150px" height="100px"/>
           <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae molestias dignissimos adipisci.</Text>
           <Name>Military Academy of the Republic of Belarus</Name>
         </FlexWrapper>
