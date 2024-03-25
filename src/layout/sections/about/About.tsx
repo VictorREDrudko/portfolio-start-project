@@ -17,7 +17,7 @@ export const About = () => {
   )
 }
 
-const StyledAbout = styled.header`
+const StyledAbout = styled.section`
   background-color: #282C33;
   color: #6dfe76;
   min-height: 100vh;
