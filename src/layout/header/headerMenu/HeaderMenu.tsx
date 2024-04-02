@@ -35,7 +35,7 @@ const LinkHeader = styled.a`
 
 const ListItemHeader = styled.li`
   position: relative;
-
+  transition: 0.5s all;
   &::after {
     content: "";
     display: inline-block;
@@ -50,9 +50,9 @@ const ListItemHeader = styled.li`
   }
 
   &:hover {
+    transform: scale(1.1);
     ${LinkHeader} {
       color: ${Theme.colors.hoverFont};
-      font-size: 26px;
     }
 
     &::after {
@@ -60,3 +60,8 @@ const ListItemHeader = styled.li`
     }
   }
 `
+
+
+// li:hover a {
+
+// }

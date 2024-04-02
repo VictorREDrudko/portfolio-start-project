@@ -1,32 +1,67 @@
 import styled from "styled-components"
-import MyPhoto from "../../../assets/photo.jpg"
+import MyPhoto from "../../../assets/My-photo.webp"
 import { FlexWrapper } from "../../../components/FlexWrapper"
+import { Container } from "../../../components/Container"
+import { Theme } from "../../../styles/Theme"
 
 export const About = () => {
   return (
     <StyledAbout>
-      <FlexWrapper justify="space-around" align="center">
-        <div>
-          <span>Hi There</span>
-          <h2>I am Victar Rudzko</h2>
-          <h1>A Web Developer.</h1>
-        </div>
-        <Photo src={MyPhoto} alt="My photo" />
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper justify="space-around" align="center">
+          <div>
+            <SmallText>Hi There</SmallText>
+            <MyName>I am Victar Rudzko</MyName>
+            <MainTitle>A Web Developer.</MainTitle>
+          </div>
+          <MyPhotoWrapper>
+            <Photo src={MyPhoto} alt="My photo" />
+          </MyPhotoWrapper>
+        </FlexWrapper>
+      </Container>
     </StyledAbout>
   )
 }
 
 const StyledAbout = styled.section`
-  background-color: #282C33;
-  color: #6dfe76;
   min-height: 100vh;
+  display: flex;
+`
+
+const MyPhotoWrapper = styled.div`
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    width: 450px;
+    height: 400px;
+    border: 1px solid ${Theme.colors.font};
+    position: absolute;
+    top: -24px;
+    left: 24px;
+    z-index: -1;
+  }
 `
 
 const Photo = styled.img`
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  border: 10px solid #6dfe76;;
-  object-fit: cover;
+  width: 450px;
+  z-index: 1;
+  box-shadow: 5px 5px 14px 14px rgba(28, 26, 26, 0.4);
+`
+
+const SmallText = styled.span`
+  font-size: 14px;
+  font-weight: 400;
+`
+
+const MyName = styled.h2`
+  font-size: 50px;
+  font-weight: 700;
+  margin: 10px 0;
+`
+
+const MainTitle = styled.h1`
+  font-size: 27px;
+  font-weight: 400;
 `
