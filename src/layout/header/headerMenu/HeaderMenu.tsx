@@ -26,7 +26,7 @@ const StyledHeaderMenu = styled.nav`
 
 const LinkHeader = styled.a`
   font-family: "Crimson Text";
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
   text-align: center;
   color: ${Theme.colors.font};

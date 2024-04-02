@@ -38,6 +38,11 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
   }
 
+  /* Отступы в секциях */
+  section {
+    padding: 90px 0;
+  }
+
   /* Задаем цвет фона для четных и не четных секций */
   section:nth-of-type(odd) {
     background-color: ${Theme.colors.mainBg};

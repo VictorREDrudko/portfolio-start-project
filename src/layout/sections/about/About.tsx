@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import MyPhoto from "../../../assets/My-photo.webp"
+import MyPhoto from "../../../assets/my-photo.png"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Container } from "../../../components/Container"
 import { Theme } from "../../../styles/Theme"
@@ -34,20 +34,22 @@ const MyPhotoWrapper = styled.div`
 
   &::before {
     content: "";
-    width: 450px;
+    width: 435px;
     height: 400px;
     border: 1px solid ${Theme.colors.font};
     position: absolute;
     top: -24px;
     left: 24px;
     z-index: -1;
+    border-radius: 15px;
   }
 `
 
 const Photo = styled.img`
-  width: 450px;
+  width: 430px;
   z-index: 1;
-  box-shadow: 5px 5px 14px 14px rgba(28, 26, 26, 0.4);
+  box-shadow: 2px 2px 24px 24px rgba(28, 26, 26, 0.6);
+  border-radius: 20px;
 `
 
 const SmallText = styled.span`
