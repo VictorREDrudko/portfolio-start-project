@@ -15,6 +15,4 @@ export const Education = () => {
 }
 
 const StyledEducation = styled.section`
-  min-height: 50vh;
-  background-color: #5b904b;
 `
