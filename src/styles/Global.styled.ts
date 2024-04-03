@@ -62,10 +62,18 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700;
   }
 
+  h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: ${Theme.colors.textColor};
+  }
+
   p {
     font-size: 14px;
     font-weight: 400;
-    color: #a8a8a9;
+    color: ${Theme.colors.textColor};
     line-height: 1.4;
   }
+
+
 `

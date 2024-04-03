@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Icon } from "../../../../components/icon/Icon"
 import { FlexWrapper } from "../../../../components/FlexWrapper"
+import { Link } from "../../../../components/Link"
 
 export const Contact = () => {
   return (
@@ -8,26 +9,25 @@ export const Contact = () => {
       <Address>
         <FlexWrapper align="center" gaps="5px">
           <Icon iconId={"address"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
-          <h4>Адрес: </h4>
-          <a href="https://yandex.by/maps/-/CDRUj2Kn">г. Минск, Фрунзенский р-н, ул. Одоевского</a>
+          <h4>Address: </h4>
+          <Link href="https://yandex.by/maps/-/CDRUj2Kn">Minsk, Prilukskaya 46-112</Link>
         </FlexWrapper>
       </Address>
       <Phone>
         <FlexWrapper align="center" gaps="5px">
           <Icon iconId={"tel"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
-          <h4>Телефон: </h4>
+          <h4>Phone: </h4>
           <p>
-            <a href="tel:+375292907833">+375 (29) 290-78-33</a>
+            <Link href="tel:+375292907833">+375 (29) 290-78-33</Link>
           </p>
-
         </FlexWrapper>
       </Phone>
       <Email>
         <FlexWrapper align="center" gaps="5px">
           <Icon iconId={"mail"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
-          <h4>Электронная почта: </h4>
+          <h4>Email: </h4>
           <p>
-            <a href="mailto:viktor_RED_rudko@mail.ru">viktor_RED_rudko@mail.ru</a>
+            <Link href="mailto:viktor_RED_rudko@mail.ru">viktor_RED_rudko@mail.ru</Link>
           </p>
         </FlexWrapper>
       </Email>
@@ -36,9 +36,21 @@ export const Contact = () => {
 }
 
 const StyledContact = styled.div`
-  min-width: 600px;
+  max-width: 500px;
   min-height: 300px;
-  background-color: #f1a9a9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ${Link} {
+    font-size: 14px;
+    padding: 0;
+
+    &::before {
+    top: 20px;
+    }
+  }
+
 `
 
 const Address = styled.div`

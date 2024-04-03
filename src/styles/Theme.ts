@@ -5,5 +5,7 @@ export const Theme = {
     accentColor: "#6dfe76",
     font: "#00fd11",
     hoverFont: "#d7fe6c",
+    textColor: "#a8a8a9",
+    noAccent: "#51844a",
   }
 }
