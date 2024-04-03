@@ -34,20 +34,14 @@ const StyledSkill = styled.div`
   border-radius: 20px;
 `
 
-const SkillTitle = styled.h2`
+const SkillTitle = styled.h3`
   margin: 50px 0 20px 0;
-  font-size: 16px;
-  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
 `
 
 const SkillText = styled.p`
   text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #a8a8a9;
 `
 
 const IconWrapper = styled.div`

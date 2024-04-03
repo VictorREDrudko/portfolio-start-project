@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   /* Убираем подчеркивания для ссылок */
   a {
     text-decoration: none;
+    color: ${Theme.colors.font}
   }
 
   /* Для списков убираем маркеры */
@@ -36,6 +37,10 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    cursor: pointer;
+    color: ${Theme.colors.font};
+    width: 150px;
+    height: 32px;
   }
 
   /* Отступы в секциях */
@@ -50,5 +55,17 @@ export const GlobalStyle = createGlobalStyle`
 
   section:nth-of-type(even) {
     background-color: ${Theme.colors.secondBg};
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a8a8a9;
+    line-height: 1.4;
   }
 `

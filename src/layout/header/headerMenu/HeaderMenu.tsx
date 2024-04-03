@@ -29,7 +29,6 @@ const LinkHeader = styled.a`
   font-size: 22px;
   font-weight: 400;
   text-align: center;
-  color: ${Theme.colors.font};
   transition: 0.5s all;
 `
 
