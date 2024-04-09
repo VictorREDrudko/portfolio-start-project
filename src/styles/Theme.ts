@@ -7,5 +7,9 @@ export const Theme = {
     hoverFont: "#d7fe6c",
     textColor: "#a8a8a9",
     noAccent: "#51844a",
+  },
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
   }
 }
