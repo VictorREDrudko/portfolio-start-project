@@ -20,5 +20,5 @@ const MapWrapper = styled.div`
 const MapIframe = styled.iframe`
   position: relative;
   min-width: 600px;
-  height: 100%;
+  height: 400px;
 `

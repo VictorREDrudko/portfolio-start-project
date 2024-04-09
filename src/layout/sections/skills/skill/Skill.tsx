@@ -27,7 +27,7 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
   background-color: ${Theme.colors.mainBg};
-  width: 330px;
+  max-width: 330px;
   padding: 50px 20px 20px 20px;
   border: 1px solid ${Theme.colors.font};
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);

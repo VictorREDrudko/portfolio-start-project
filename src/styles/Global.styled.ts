@@ -41,6 +41,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${Theme.colors.font};
     width: 150px;
     height: 32px;
+    font-family: "Crimson Text", sans-serif;
   }
 
   /* Отступы в секциях */
