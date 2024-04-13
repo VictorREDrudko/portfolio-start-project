@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "../../../../components/Link"
+import { Theme } from "../../../../styles/Theme"
 
 export const MenuWorks = (props: {menuItems: Array<string>}) => {
   return (
@@ -23,6 +24,10 @@ const StyledMenuWorks = styled.nav`
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    @media ${Theme.media.mobile} {
+      gap: 10px;
+    }
   }
 `
 

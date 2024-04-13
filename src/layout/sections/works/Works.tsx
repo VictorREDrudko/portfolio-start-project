@@ -8,6 +8,7 @@ import coffeeImg from "../../../assets/images/coffee.png"
 import game1Img from "../../../assets/images/game1.png"
 import game2Img from "../../../assets/images/hangman.png"
 import { Container } from "../../../components/Container"
+import { Theme } from "../../../styles/Theme"
 
 
 const worksItems = ["All", "SPA", "Game", "React"]
@@ -46,5 +47,9 @@ export const Works = () => {
 }
 
 const StyledWorks = styled.section`
-
+  @media ${Theme.media.desktopMini} {
+    ${FlexWrapper} {
+      justify-content: center;
+    }
+  }
 `
