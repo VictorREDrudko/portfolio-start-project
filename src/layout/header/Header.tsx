@@ -30,4 +30,8 @@ const StyledHeader = styled.header`
   left: 0;
   z-index: 999;
   padding: 10px 0;
+
+  @media ${Theme.media.mobile} {
+    padding: 5px 0;
+    }
 `
