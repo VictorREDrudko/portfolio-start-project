@@ -10,7 +10,7 @@ export const Contacts = () => {
     <StyledContacts>
       <SectionTitle>Contacts</SectionTitle>
       <Container>
-        <FlexWrapper justify="space-around" gaps="20px" wrap="wrap">
+        <FlexWrapper justify="space-around" gaps="40px" wrap="wrap">
           <Contact/>
           <YandexMap/>
         </FlexWrapper>
@@ -21,4 +21,7 @@ export const Contacts = () => {
 
 const StyledContacts = styled.section`
   min-height: 70vh;
+  ${FlexWrapper} {
+    width: 100%;
+  }
 `

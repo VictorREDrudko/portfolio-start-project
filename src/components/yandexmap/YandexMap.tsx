@@ -14,11 +14,13 @@ const MapWrapper = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 4px 4px 5px 5px rgba(255, 255, 255, 0.2)
+  box-shadow: 4px 4px 5px 5px rgba(255, 255, 255, 0.2);
+  flex-grow: 1;
 `
 
 const MapIframe = styled.iframe`
   position: relative;
   min-width: 600px;
+  width: 100%;
   height: 400px;
 `

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Icon } from "../../../../components/icon/Icon"
 import { FlexWrapper } from "../../../../components/FlexWrapper"
 import { Link } from "../../../../components/Link"
+import { Theme } from "../../../../styles/Theme"
 
 export const Contact = () => {
   return (
@@ -16,7 +17,7 @@ export const Contact = () => {
       <Phone>
         <FlexWrapper align="center" gaps="5px">
           <Icon iconId={"tel"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
-          <h4>Phone: </h4>
+          <h4>My number phone: </h4>
           <p>
             <Link href="tel:+375292907833">+375 (29) 290-78-33</Link>
           </p>
@@ -36,11 +37,12 @@ export const Contact = () => {
 }
 
 const StyledContact = styled.div`
-  max-width: 500px;
-  min-height: 300px;
+  max-width: 350px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 
   ${Link} {
     font-size: 14px;
@@ -54,13 +56,25 @@ const StyledContact = styled.div`
 `
 
 const Address = styled.div`
-
+  @media ${Theme.media.mobile} {
+    h4 {
+    display: none;
+    }
+  }
 `
 
 const Phone = styled.div`
-
+  @media ${Theme.media.mobile} {
+    h4 {
+    display: none;
+    }
+  }
 `
 
 const Email = styled.div`
-
+  @media ${Theme.media.mobile} {
+    h4 {
+    display: none;
+    }
+  }
 `

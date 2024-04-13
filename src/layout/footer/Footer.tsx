@@ -51,6 +51,10 @@ const SocialList = styled.ul`
   display: flex;
   gap: 20px;
   margin: 20px 0;
+
+  @media ${Theme.media.mobile} {
+    gap: 10px;
+  }
 `
 
 const SocialItem = styled.li`
