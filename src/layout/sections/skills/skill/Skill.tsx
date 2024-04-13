@@ -32,6 +32,10 @@ const StyledSkill = styled.div`
   border: 1px solid ${Theme.colors.font};
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+
+  @media ${Theme.media.desktopMini} {
+    max-width: 300px;
+  }
 `
 
 const SkillTitle = styled.h3`

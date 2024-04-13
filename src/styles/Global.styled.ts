@@ -47,6 +47,10 @@ export const GlobalStyle = createGlobalStyle`
   /* Отступы в секциях */
   section {
     padding: 90px 0;
+
+    @media ${Theme.media.mobile} {
+      padding: 70px 0;
+    }
   }
 
   /* Задаем цвет фона для четных и не четных секций */
@@ -75,6 +79,4 @@ export const GlobalStyle = createGlobalStyle`
     color: ${Theme.colors.textColor};
     line-height: 1.4;
   }
-
-
 `
