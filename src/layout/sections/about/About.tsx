@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import MyPhoto from "../../../assets/my-photo.png"
+import MyPhoto from "../../../assets/my-photo-1x.png"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { Container } from "../../../components/Container"
 import { Theme } from "../../../styles/Theme"
