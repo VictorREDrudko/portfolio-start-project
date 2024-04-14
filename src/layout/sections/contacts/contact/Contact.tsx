@@ -1,20 +1,19 @@
-import styled from "styled-components"
 import { Icon } from "../../../../components/icon/Icon"
 import { FlexWrapper } from "../../../../components/FlexWrapper"
 import { Link } from "../../../../components/Link"
-import { Theme } from "../../../../styles/Theme"
+import { S } from "../Contacts_Style"
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
   return (
-    <StyledContact>
-      <Address>
+    <S.Contact>
+      <S.Address>
         <FlexWrapper align="center" gaps="5px" wrap="wrap">
           <Icon iconId={"address"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>Address: </h4>
           <Link href="https://yandex.by/maps/-/CDRUj2Kn">Minsk, Prilukskaya 46-112</Link>
         </FlexWrapper>
-      </Address>
-      <Phone>
+      </S.Address>
+      <S.Phone>
         <FlexWrapper align="center" gaps="5px">
           <Icon iconId={"tel"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>My number phone: </h4>
@@ -22,8 +21,8 @@ export const Contact = () => {
             <Link href="tel:+375292907833">+375 (29) 290-78-33</Link>
           </p>
         </FlexWrapper>
-      </Phone>
-      <Email>
+      </S.Phone>
+      <S.Email>
         <FlexWrapper align="center" gaps="5px">
           <Icon iconId={"mail"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>Email: </h4>
@@ -31,50 +30,7 @@ export const Contact = () => {
             <Link href="mailto:viktor_RED_rudko@mail.ru">viktor_RED_rudko@mail.ru</Link>
           </p>
         </FlexWrapper>
-      </Email>
-    </StyledContact>
+      </S.Email>
+    </S.Contact>
   )
 }
-
-const StyledContact = styled.div`
-  max-width: 350px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-
-  ${Link} {
-    font-size: 14px;
-    padding: 0;
-
-    &::before {
-    top: 20px;
-    }
-  }
-
-`
-
-const Address = styled.div`
-  @media ${Theme.media.mobile} {
-    h4 {
-    display: none;
-    }
-  }
-`
-
-const Phone = styled.div`
-  @media ${Theme.media.mobile} {
-    h4 {
-    display: none;
-    }
-  }
-`
-
-const Email = styled.div`
-  @media ${Theme.media.mobile} {
-    h4 {
-    display: none;
-    }
-  }
-`

@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { Theme } from "../../styles/Theme"
+import React from "react"
 
-export const YandexMap = () => {
+export const YandexMap: React.FC = () => {
   return (
       <MapWrapper>
         <MapIframe src="https://yandex.by/map-widget/v1/?ll=27.500603%2C53.883326&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg2NjY3Mjk3MRJB0JHQtdC70LDRgNGD0YHRjCwg0JzRltC90YHQuiwg0J_RgNGL0LvRg9GG0LrQsNGPINCy0YPQu9GW0YbQsCwgNDYiCg25_dtBFWCIV0I%2C&z=17.18">

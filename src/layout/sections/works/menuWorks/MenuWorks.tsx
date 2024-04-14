@@ -2,14 +2,14 @@ import styled from "styled-components"
 import { Link } from "../../../../components/Link"
 import { Theme } from "../../../../styles/Theme"
 
-export const MenuWorks = (props: {menuItems: Array<string>}) => {
+export const MenuWorks = (props: {menuItems: Array<{status: "all" | "game" | "spa", title: string} >}) => {
   return (
   <StyledMenuWorks>
     <ul>
-      {props.menuItems.map((element: string, index: number) => {
+      {props.menuItems.map((element, index) => {
         return (
           <ListWorks key={index}>
-            <Link href="#">{element}</Link>
+            <Link href="#">{element.status}</Link>
           </ListWorks>
         )
       })}

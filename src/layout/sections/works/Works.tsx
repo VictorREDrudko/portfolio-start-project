@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import { SectionTitle } from "../../../components/SectionTitle"
 import { MenuWorks } from "./menuWorks/MenuWorks"
 import { FlexWrapper } from "../../../components/FlexWrapper"
@@ -8,48 +7,79 @@ import coffeeImg from "../../../assets/images/coffee.png"
 import game1Img from "../../../assets/images/game1.png"
 import game2Img from "../../../assets/images/hangman.png"
 import { Container } from "../../../components/Container"
-import { Theme } from "../../../styles/Theme"
+import React from "react"
+import { S } from "./Works_Styles"
 
+const WorksData = [
+  {
+    src: librariImg,
+    title: "Library",
+    text: "My first project: a single-page application (SPA) for the Brooklyn Library! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 0)!",
+    pathDemo: "https://VictorREDrudko.github.io/Library/index.html",
+    pathCode: "https://github.com/VictorREDrudko/Library",
+  },
 
-const worksItems = ["All", "SPA", "Game", "React"]
+  {
+    src: coffeeImg,
+    title: "Coffee house",
+    text: "My second project: a single-page application (SPA) for the coffee house! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 1)!",
+    pathDemo: "https://VictorREDrudko.github.io/coffee-house/index.html",
+    pathCode: "https://github.com/VictorREDrudko/coffe-house",
+  },
 
-export const Works = () => {
+  {
+    src: game1Img,
+    title: "Collect the flags",
+    text: "My first game: Selection of identical cards with country flags! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 0)!",
+    pathDemo: "https://VictorREDrudko.github.io/random-game/index.html",
+    pathCode: "https://github.com/VictorREDrudko/random-game/tree/gh-pages",
+  },
+
+  {
+    src: game2Img,
+    title: "Hangman",
+    text: "My second game: Guess the word! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 1)!",
+    pathDemo: "https://VictorREDrudko.github.io/random-game/index.html",
+    pathCode: "https://github.com/VictorREDrudko/hangman",
+  },
+]
+
+const worksItems: Array<{status: "all" | "game" | "spa", title: string} > = [
+  {
+    title: "All",
+    status: "all"
+  },
+  {
+    title: "SPA",
+    status: "spa"
+  },
+  {
+    title: "Game",
+    status: "game"
+  }
+]
+
+export const Works: React.FC = () => {
   return (
-    <StyledWorks>
+    <S.Works>
       <Container>
         <SectionTitle>My works</SectionTitle>
         <MenuWorks menuItems={worksItems}/>
         <FlexWrapper justify={"space-between"} wrap="wrap" gaps="40px">
-          <Work src={librariImg}
-                title={"Library"}
-                text={"My first project: a single-page application (SPA) for the Brooklyn Library! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 0)!"}
-                pathDemo={"https://VictorREDrudko.github.io/Library/index.html"}
-                pathCode={"https://github.com/VictorREDrudko/Library"}/>
-          <Work src={coffeeImg}
-                title={"Hangman"}
-                text={"My second project: a single-page application (SPA) for the coffee house! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 1)!"}
-                pathDemo={"https://VictorREDrudko.github.io/coffee-house/index.html"}
-                pathCode={"https://github.com/VictorREDrudko/coffe-house"}/>
-          <Work src={game1Img}
-                title={"Collect the flags"}
-                text={"My first game: Selection of identical cards with country flags! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 0)!"}
-                pathDemo={"https://VictorREDrudko.github.io/random-game/index.html"}
-                pathCode={"https://github.com/VictorREDrudko/random-game/tree/gh-pages"}/>
-          <Work src={game2Img}
-                title={"Hangman"}
-                text={"My second game: Guess the word! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 1)!"}
-                pathDemo={"https://VictorREDrudko.github.io/random-game/index.html"}
-                pathCode={"https://github.com/VictorREDrudko/hangman"}/>
+          {WorksData.map((w, index) => {
+            return (
+              <Work key={index}
+                    src={w.src} 
+                    title={w.title}
+                    text={w.text}
+                    pathDemo={w.pathDemo}
+                    pathCode={w.pathCode}
+                    // type={"spa"}
+              />
+            )
+          })}
         </FlexWrapper>
       </Container>
-    </StyledWorks>
+    </S.Works>
   )
 }
-
-const StyledWorks = styled.section`
-  @media ${Theme.media.desktopMini} {
-    ${FlexWrapper} {
-      justify-content: center;
-    }
-  }
-`

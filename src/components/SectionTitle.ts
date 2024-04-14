@@ -4,8 +4,6 @@ import { Font } from "../styles/Common"
 
 export const SectionTitle = styled.h2`
   text-align: center;
-  /* font-size: 36px;
-  font-weight: 600; */
   letter-spacing: 5px;
   margin-bottom: 80px;
   position: relative;

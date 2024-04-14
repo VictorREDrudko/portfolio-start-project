@@ -1,13 +1,14 @@
-import styled from "styled-components"
 import { SectionTitle } from "../../../components/SectionTitle"
 import { FlexWrapper } from "../../../components/FlexWrapper"
 import { YandexMap } from "../../../components/yandexmap/YandexMap"
 import { Contact } from "./contact/Contact"
 import { Container } from "../../../components/Container"
+import { S } from "./Contacts_Style"
+import React from "react"
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
-    <StyledContacts>
+    <S.Contacts>
       <SectionTitle>Contacts</SectionTitle>
       <Container>
         <FlexWrapper justify="space-around" gaps="40px" wrap="wrap">
@@ -15,13 +16,6 @@ export const Contacts = () => {
           <YandexMap/>
         </FlexWrapper>
       </Container>
-    </StyledContacts>
+    </S.Contacts>
   )
 }
-
-const StyledContacts = styled.section`
-  min-height: 70vh;
-  ${FlexWrapper} {
-    width: 100%;
-  }
-`
