@@ -1,44 +1,26 @@
-import styled from "styled-components"
 import { Link } from "../../../../components/Link"
-import { Theme } from "../../../../styles/Theme"
+import { S } from "../Works_Styles"
 
-export const MenuWorks = (props: {menuItems: Array<{status: "all" | "game" | "spa", title: string} >}) => {
+export type StatusType = "all" | "game" | "spa"
+
+type MenuWorksPropsType = {
+  menuItems: Array<{status: StatusType, title: string}>,
+  changeStatus: (value: StatusType) => void,
+  currentFilterStatus: string,
+}
+
+export const MenuWorks = (props: MenuWorksPropsType) => {
   return (
-  <StyledMenuWorks>
+  <S.MenuWorks>
     <ul>
       {props.menuItems.map((element, index) => {
         return (
-          <ListWorks key={index}>
-            <Link href="#">{element.status}</Link>
-          </ListWorks>
+          <S.ListWorks key={index}>
+            <Link active={props.currentFilterStatus === element.status} as={"button"} onClick={() => {props.changeStatus(element.status)}}>{element.title}</Link>
+          </S.ListWorks>
         )
       })}
     </ul>
-  </StyledMenuWorks>
+  </S.MenuWorks>
   )
 }
-
-const StyledMenuWorks = styled.nav`
-  margin-bottom: 40px;
-  ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-    @media ${Theme.media.mobile} {
-      gap: 10px;
-    }
-  }
-`
-
-const ListWorks = styled.li`
-  transform: scale(1);
-  transition: 0.5s all;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-`
-
-
-

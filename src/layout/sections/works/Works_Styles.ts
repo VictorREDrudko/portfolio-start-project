@@ -14,7 +14,6 @@ const Works = styled.section`
 `
 
 // from Work
-
 const Work = styled.div`
   background-color: ${Theme.colors.secondBg};
   max-width: 540px;
@@ -88,8 +87,9 @@ const ContainerImg = styled.div`
     ${Button} {
       opacity: 1;
       transition: all 0.5s;
+      background-color: ${Theme.colors.noAccent};
       &:hover {
-        background-color: ${Theme.colors.hoverFont};
+        background-color: ${Theme.colors.font};
       }
     }
   }
@@ -125,6 +125,28 @@ const Description = styled.div`
   padding: 25px 20px;
 `
 
+// From Menu Work
+const MenuWorks = styled.nav`
+  margin-bottom: 40px;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @media ${Theme.media.mobile} {
+      gap: 10px;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+`
+
+const ListWorks = styled.li`
+  transform: scale(1);
+  transition: 0.5s all;
+`
 
 export const S = {
   Works,
@@ -133,5 +155,7 @@ export const S = {
   ImageWork,
   TitleWork,
   TextWork,
-  Description
+  Description,
+  MenuWorks,
+  ListWorks,
 }
