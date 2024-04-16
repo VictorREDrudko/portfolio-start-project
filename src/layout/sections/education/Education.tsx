@@ -16,4 +16,5 @@ export const Education: React.FC = () => {
 }
 
 const StyledEducation = styled.section`
+  position: relative;
 `

@@ -6,6 +6,8 @@ import { Link } from "../../../components/Link";
 
 // from Works
 const Works = styled.section`
+  position: relative;
+  
   @media ${Theme.media.desktopMini} {
     ${FlexWrapper} {
       justify-content: center;
@@ -131,7 +133,7 @@ const MenuWorks = styled.nav`
   ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 
     @media ${Theme.media.mobile} {
       gap: 10px;

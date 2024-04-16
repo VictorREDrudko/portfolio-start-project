@@ -17,7 +17,7 @@ const WorksData = [
     text: "My first project: a single-page application (SPA) for the Brooklyn Library! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 0)!",
     pathDemo: "https://VictorREDrudko.github.io/Library/index.html",
     pathCode: "https://github.com/VictorREDrudko/Library",
-    type: "spa",
+    type: "lp",
   },
 
   {
@@ -26,7 +26,7 @@ const WorksData = [
     text: "My second project: a single-page application (SPA) for the coffee house! Created in 2023 while in The Rolling Scopes School (course «JavaScript/Front-end», stage 1)!",
     pathDemo: "https://VictorREDrudko.github.io/coffee-house/index.html",
     pathCode: "https://github.com/VictorREDrudko/coffe-house",
-    type: "spa",
+    type: "lp",
   },
 
   {
@@ -54,8 +54,8 @@ const worksItems: Array<{status: StatusType, title: string} > = [
     status: "all"
   },
   {
-    title: "SPA",
-    status: "spa"
+    title: "Landing page",
+    status: "lp"
   },
   {
     title: "Game",
@@ -67,8 +67,8 @@ export const Works: React.FC = () => {
   const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
   let filteredWorks = WorksData;
 
-  if (currentFilterStatus === "spa") {
-    filteredWorks = WorksData.filter(work => work.type === "spa");
+  if (currentFilterStatus === "lp") {
+    filteredWorks = WorksData.filter(work => work.type === "lp");
   }
 
   if (currentFilterStatus === "game") {

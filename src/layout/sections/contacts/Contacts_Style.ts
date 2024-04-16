@@ -5,6 +5,8 @@ import { Theme } from "../../../styles/Theme";
 
 // From Contacts
 const Contacts = styled.section`
+  position: relative;
+  
   min-height: 70vh;
   ${FlexWrapper} {
     width: 100%;

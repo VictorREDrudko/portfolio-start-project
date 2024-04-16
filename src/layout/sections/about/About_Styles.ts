@@ -61,6 +61,9 @@ const MyName = styled.h2`
 
 const MainTitle = styled.h1`
   ${Font({Fmax: 27, Fmin: 20, weight: 400, color: Theme.colors.textColor})};
+  p {
+    display: none;
+  }
 `
 
 export const S = {

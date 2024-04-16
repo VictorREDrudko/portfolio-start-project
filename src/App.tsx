@@ -7,10 +7,12 @@ import { Education } from './layout/sections/education/Education';
 import { Skills } from './layout/sections/skills/Skills';
 import { Slogan } from './layout/sections/slogan/Slogan';
 import { Works } from './layout/sections/works/Works';
+import { Animation } from './components/animation/Animation'
 
 function App() {
     return (
       <div className="App">
+        <Animation/>
         <Header/>
         <About/>
         <Skills/>

@@ -1,7 +1,7 @@
 import { Link } from "../../../../components/Link"
 import { S } from "../Works_Styles"
 
-export type StatusType = "all" | "game" | "spa"
+export type StatusType = "all" | "game" | "lp"
 
 type MenuWorksPropsType = {
   menuItems: Array<{status: StatusType, title: string}>,

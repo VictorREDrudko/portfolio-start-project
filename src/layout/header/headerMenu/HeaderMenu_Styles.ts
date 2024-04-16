@@ -5,9 +5,10 @@ import { Theme } from "../../../styles/Theme";
 const LinkHeader = styled.a`
   font-family: "Crimson Text";
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
   transition: 0.5s all;
+  color: ${Theme.colors.noAccent}
 `
 
 const MenuItem = styled.li`
@@ -18,7 +19,7 @@ const MenuItem = styled.li`
     display: inline-block;
     height: 2px;
     width: 100%;
-    background-color: ${Theme.colors.hoverFont};
+    background-color: ${Theme.colors.font};
     transform: scale(0);
     position: absolute;
     top: 35px;
@@ -29,7 +30,7 @@ const MenuItem = styled.li`
   &:hover {
     transform: scale(1.1);
     ${LinkHeader} {
-      color: ${Theme.colors.hoverFont};
+      color: ${Theme.colors.font};
     }
 
     &::after {
