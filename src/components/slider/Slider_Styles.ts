@@ -4,6 +4,7 @@ import { Theme } from "../../styles/Theme"
 const Slider = styled.div`
   background-color: ${Theme.colors.secondBg};
   max-width: 450px;
+  width: 100%;
 `
 
 const Slide = styled.div`
