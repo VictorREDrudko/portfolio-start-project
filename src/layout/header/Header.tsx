@@ -6,8 +6,6 @@ import React from "react"
 import { S } from "./Header_Styles"
 import { DesktopMenu } from "./headerMenu/desktopMenu/DesktopMenu"
 
-const items = ["About me", "Skills", "Works", "Education", "Contacts"]
-
 // FC функциональная компонента
 export const Header: React.FC = () => {
   // отрисовка либо меню для ПК, либо для мобильных устройств
@@ -26,7 +24,7 @@ export const Header: React.FC = () => {
         <FlexWrapper justify="space-between" align="center">
           <Logo/>
 
-          {width < breakpoint ? <MobileMenu menuItems={items}/> : <DesktopMenu menuItems={items}/>}
+          {width < breakpoint ? <MobileMenu/> : <DesktopMenu/>}
 
         </FlexWrapper>
       </Container>

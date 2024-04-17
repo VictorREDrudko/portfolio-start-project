@@ -1,19 +1,17 @@
 import styled, { css } from "styled-components";
 import { Theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 // from Menu
-const LinkHeader = styled.a`
+const LinkHeader = styled(Link)`
   font-family: "Crimson Text";
   font-size: 22px;
   font-weight: 700;
   text-align: center;
   transition: 0.5s all;
-  color: ${Theme.colors.noAccent}
-`
+  color: ${Theme.colors.noAccent};
+  cursor: pointer;
 
-const MenuItem = styled.li`
-  position: relative;
-  transition: 0.5s all;
   &::after {
     content: "";
     display: inline-block;
@@ -27,9 +25,9 @@ const MenuItem = styled.li`
     transition: 0.5s all;
   }
 
-  &:hover {
+  &:hover, &.active {
     transform: scale(1.1);
-    ${LinkHeader} {
+    & {
       color: ${Theme.colors.font};
     }
 
@@ -37,6 +35,11 @@ const MenuItem = styled.li`
       transform: scale(1);
     }
   }
+`
+
+const MenuItem = styled.li`
+  position: relative;
+  transition: 0.5s all;
 `
 
 // from Mobile menu

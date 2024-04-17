@@ -6,7 +6,7 @@ import React from "react"
 
 export const Education: React.FC = () => {
   return (
-    <StyledEducation>
+    <StyledEducation id="education">
       <FlexWrapper justify="space-between" align="center" direction="column">
         <SectionTitle>Education</SectionTitle>
         <Slider/>

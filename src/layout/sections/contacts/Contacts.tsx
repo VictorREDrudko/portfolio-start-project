@@ -8,7 +8,7 @@ import React from "react"
 
 export const Contacts: React.FC = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id="contacts">
       <SectionTitle>Contacts</SectionTitle>
       <Container>
         <FlexWrapper justify="space-around" gaps="40px" wrap="wrap">
