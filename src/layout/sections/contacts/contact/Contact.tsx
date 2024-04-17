@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
         <FlexWrapper align="center" gaps="5px" wrap="wrap">
           <Icon iconId={"address"} width="61px" height="61px" viewBox="0 0 2000 2829"/>
           <h4>Address: </h4>
-          <Link href="https://yandex.by/maps/-/CDRUj2Kn">Minsk, Prilukskaya 46-112</Link>
+          <Link href="https://yandex.by/maps/-/CDRUj2Kn" target="_blank">Minsk, Prilukskaya 46-112</Link>
         </FlexWrapper>
       </S.Address>
       <S.Phone>

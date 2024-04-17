@@ -9,6 +9,7 @@ import game2Img from "../../../assets/images/hangman.png"
 import { Container } from "../../../components/Container"
 import React, { useState } from "react"
 import { S } from "./Works_Styles"
+import {AnimatePresence, motion} from "framer-motion"
 
 const WorksData = [
   {
@@ -18,6 +19,7 @@ const WorksData = [
     pathDemo: "https://VictorREDrudko.github.io/Library/index.html",
     pathCode: "https://github.com/VictorREDrudko/Library",
     type: "lp",
+    id: 1,
   },
 
   {
@@ -27,6 +29,7 @@ const WorksData = [
     pathDemo: "https://VictorREDrudko.github.io/coffee-house/index.html",
     pathCode: "https://github.com/VictorREDrudko/coffe-house",
     type: "lp",
+    id: 2,
   },
 
   {
@@ -36,6 +39,7 @@ const WorksData = [
     pathDemo: "https://VictorREDrudko.github.io/random-game/index.html",
     pathCode: "https://github.com/VictorREDrudko/random-game/tree/gh-pages",
     type: "game",
+    id: 3,
   },
 
   {
@@ -45,6 +49,7 @@ const WorksData = [
     pathDemo: "https://VictorREDrudko.github.io/random-game/index.html",
     pathCode: "https://github.com/VictorREDrudko/hangman",
     type: "game",
+    id: 4,
   },
 ]
 
@@ -88,17 +93,28 @@ export const Works: React.FC = () => {
                   changeStatus={changeStatus}
                   currentFilterStatus={currentFilterStatus}/>
         <FlexWrapper justify={"space-between"} wrap="wrap" gaps="40px">
-          {filteredWorks.map((w, index) => {
-            return (
-              <Work key={index}
-                    src={w.src} 
-                    title={w.title}
-                    text={w.text}
-                    pathDemo={w.pathDemo}
-                    pathCode={w.pathCode}
-              />
-            )
-          })}
+
+          <AnimatePresence>
+            {filteredWorks.map((w, index) => {
+              return (
+                <motion.div initial={{ opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
+                            key={w.id}
+                            layout
+                >
+                  <Work key={w.id}
+                      src={w.src} 
+                      title={w.title}
+                      text={w.text}
+                      pathDemo={w.pathDemo}
+                      pathCode={w.pathCode}
+                  />
+                </motion.div>
+              )
+            })}
+          </AnimatePresence>
+
         </FlexWrapper>
       </Container>
     </S.Works>
