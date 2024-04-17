@@ -20,7 +20,7 @@ export const Link = styled.a<{active?: boolean}>`
     top: 30px;
     left: 0;
     transform: scale(0);
-    transition: 0.5s all;
+    transition: ${Theme.animation.transition};
   }
 
   &:hover {

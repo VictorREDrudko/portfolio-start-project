@@ -17,4 +17,10 @@ export const Education: React.FC = () => {
 
 const StyledEducation = styled.section`
   position: relative;
+
+  & svg {
+    &:hover {
+    transform: scale(1.0);
+   }
+  }
 `

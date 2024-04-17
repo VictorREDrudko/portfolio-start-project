@@ -9,6 +9,7 @@
   background-color: #282C33;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.5s all;
 }
 
 .alice-carousel__dots-item:not(.__custom):not(:last-child) {

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Theme } from "../../../styles/Theme";
+import { Icon } from "../../../components/icon/Icon";
 
 // from Skills
 const Skills = styled.section`
@@ -17,6 +18,12 @@ const Skill = styled.div`
 
   @media ${Theme.media.desktopMini} {
     max-width: 300px;
+  }
+
+  & svg {
+    &:hover {
+    transform: scale(1.0);
+   }
   }
 `
 

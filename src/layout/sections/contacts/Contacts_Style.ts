@@ -31,6 +31,11 @@ const Contact = styled.div`
     }
   }
 
+  & svg {
+    &:hover {
+    transform: scale(1.0);
+   }
+  }
 `
 
 const Address = styled.div`
@@ -38,6 +43,10 @@ const Address = styled.div`
     h4 {
     display: none;
     }
+  }
+
+  & a:hover {
+      transform: scale(1.0);
   }
 `
 

@@ -8,10 +8,15 @@ export const Theme = {
     textColor: "#a8a8a9",
     noAccent: "#51844a",
   },
+
   media: {
     desktopMini: "screen and (max-width: 1200px)",
     desktopMini1: "screen and (max-width: 1000px)",
     tablet: "screen and (max-width: 768px)",
     mobile: "screen and (max-width: 576px)",
+  },
+
+  animation: {
+    transition: "0.5s ease-in-out"
   }
 }

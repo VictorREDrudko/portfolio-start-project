@@ -62,10 +62,9 @@ const ContainerImg = styled.div`
     transform: translate(-50%, -50%);
     background-color: ${Theme.colors.font};
     color: ${Theme.colors.mainBg};
-    transition: all 0.5s;
+    transition: ${Theme.animation.transition};
     font-weight: 700;
     border-radius: 15px;
-    transition: all 0.5s;
   }
 
   &::before {
@@ -76,9 +75,11 @@ const ContainerImg = styled.div`
       right: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(2px);
       border-radius: 15px 15px 0 0;
       opacity: 0;
+      width: 100%;
+      transition: ${Theme.animation.transition};
   }
 
   &:hover {

@@ -8,7 +8,7 @@ const LinkHeader = styled(Link)`
   font-size: 22px;
   font-weight: 700;
   text-align: center;
-  transition: 0.5s all;
+  transition: ${Theme.animation.transition};
   color: ${Theme.colors.noAccent};
   cursor: pointer;
 
@@ -22,11 +22,12 @@ const LinkHeader = styled(Link)`
     position: absolute;
     top: 35px;
     left: 0;
-    transition: 0.5s all;
+    transition: ${Theme.animation.transition};
   }
 
   &:hover, &.active {
     transform: scale(1.1);
+    transition: ${Theme.animation.transition};
     & {
       color: ${Theme.colors.font};
     }
@@ -102,20 +103,27 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-
   display: none;
-  ${props => props.isOpen && css<{isOpen: boolean}>`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: ${Theme.animation.transition};
 
   ul {
     display: flex;
-    gap: 50px;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
+    transition: ${Theme.animation.transition};
   }
+
+  ${props => props.isOpen && css<{isOpen: boolean}>`
+    transform: translateY(0);
+    & ul {
+      gap: 50px;
+    }
+  `}
 `
 
 // from Desktop menu
