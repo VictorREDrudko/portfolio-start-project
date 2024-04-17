@@ -34,7 +34,12 @@ export const Menu: React.FC = () => {
       {items.map((element, index: number) => {
         return (
           <S.MenuItem key={index}>
-            <S.LinkHeader activeClass="active" to={element.href} smooth={true} spy={true}>{element.title}</S.LinkHeader>
+            <S.LinkHeader activeClass="active" 
+                          to={element.href} 
+                          smooth={true} 
+                          spy={true}
+                          offset={-100}
+            >{element.title}</S.LinkHeader>
           </S.MenuItem>
         )
       })}
