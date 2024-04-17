@@ -47,10 +47,10 @@ export const GlobalStyle = createGlobalStyle`
 
   /* Отступы в секциях */
   section {
-    padding: 90px 0;
+    padding: 120px 0;
 
     @media ${Theme.media.mobile} {
-      padding: 70px 0;
+      padding: 80px 0;
     }
   }
 
