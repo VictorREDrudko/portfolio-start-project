@@ -24,7 +24,13 @@ export const About: React.FC = () => {
                       }}/>
             </S.MainTitle>
           </S.TextWrapper>
-          <Tilt reset={false}>
+          <Tilt className="parallax-effect-img"
+                tiltMaxAngleX={40}
+                tiltMaxAngleY={40}
+                perspective={800}
+                transitionSpeed={1500}
+                scale={1.1}
+                gyroscope={true}>
             <S.MyPhotoWrapper>
               <S.Photo src={MyPhoto} alt="My photo" />
             </S.MyPhotoWrapper>

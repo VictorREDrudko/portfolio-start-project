@@ -77,10 +77,12 @@ export const Skills = () => {
         <FlexWrapper wrap="wrap" justify="space-around" gaps="30px">
 
           {skillData.map((s, index) => {
-            return <Skill iconId={s.iconId} key={index}
-                          viewBox={s.viewBox}
-                          title={s.title}
-                          text={s.text}/>
+            return (
+              <Skill  iconId={s.iconId} key={index}
+                      viewBox={s.viewBox}
+                      title={s.title}
+                      text={s.text}/>
+            )
           })}
 
         </FlexWrapper>
